@@ -1,0 +1,129 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(51, 47, 47);
+}
+
+#container {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
+#img img {
+    width: 32rem;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: #f8fafc;
+    background-color: black;
+    border-radius: 10px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#title {
+    font-size: 2.25rem;
+    position: relative; 
+}
+
+#title::after {
+    position: absolute;
+    content: '';
+    background-color: #134647;
+    width: 8rem;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    border-radius: 3px;
+}
+
+.input-box label {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 43, 43);
+    padding: 0.3rem;
+    border-radius: 5px;
+    margin-top: 3px;
+}
+
+.input-field i,
+.input-field span {
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+}
+
+.input-field input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0 0.5rem;
+    color: white;
+}
+
+/* tirar setas do input */
+.input-field input::-webkit-outer-spin-button,
+.input-field input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.input-field input:focus { /* tirando borda branca do input*/
+    outline: none;
+}
+
+#calculate {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: #134647;
+    color: white;
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px solid red;
+    padding: 0.75rem 0;
+}
+
+#result-imc {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size: 2.25rem;
+}
+
+#result-imc span:last-child { /*aplicando estilo somente para o último span*/
+    font-size: 0.875rem;
+}
+
+#descricao {
+    width: 15.5rem; /*aplicando largura para não aumentar o tamanho da div*/
+}
+
+.hidden { 
+    display: none;  /* retirar informações do imc*/
+}
