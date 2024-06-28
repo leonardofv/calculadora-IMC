@@ -1,10 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: rgb(51, 47, 47);
+    background-color: rgb(12, 1, 1);
 }
 
 #container {
@@ -23,7 +29,7 @@ body {
     gap: 2rem;
     padding: 2rem;
     color: #f8fafc;
-    background-color: black;
+    background-color: #1f1e24;
     border-radius: 10px;
 }
 
@@ -58,7 +64,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(40, 43, 43);
+    background-color: rgb(43, 48, 48);
     padding: 0.3rem;
     border-radius: 5px;
     margin-top: 3px;
@@ -106,6 +112,7 @@ body {
     align-items: center;
     gap: 2rem;
     border-top: 1px solid #134647;
+    border-bottom: 1px solid #134647;
     padding: 0.75rem 0;
 }
 
@@ -122,8 +129,35 @@ body {
 
 #descricao {
     width: 15.5rem; /*aplicando largura para não aumentar o tamanho da div*/
+    font-size: 2rem;
+    margin-left: 2rem;
 }
 
 .hidden { 
     display: none;  /* retirar informações do imc*/
+}
+
+.normal {
+    color: red;  /*aplicando cor no resultado do IMC*/
+}
+
+
+@media screen and (max-width: 1024px) {
+    #img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        width: 100%;
+        height: 100%;
+    }
+
+    #calculator {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
 }

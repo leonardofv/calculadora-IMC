@@ -12,6 +12,7 @@ form.addEventListener('submit', function(event) {
     let descricao = '';
 
     document.getElementById('infos').classList.remove('hidden'); //removendo classe hidden
+    value.classList.add('normal');
 
     if(imc < 18.5) {
         descricao = 'Magreza';
